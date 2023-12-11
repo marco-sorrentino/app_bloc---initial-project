@@ -18,20 +18,15 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: BlocListener<CounterBloc, CounterState>(
-                listener: (context, state) {
-                  // TODO: implement listener
-                },
-                child: Center(
-                  child: BlocBuilder<CounterBloc, CounterState>(
-                    builder: (context, state) {
-                      return Text(
-                        'Counter value: ${state.couterValue}',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      );
-                    },
-                  ),
+              child: Center(
+                child: BlocBuilder<CounterBloc, CounterState>(
+                  builder: (context, state) {
+                    return Text(
+                      'Counter value: ${state.couterValue}',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    );
+                  },
                 ),
               ),
             ),

@@ -14,10 +14,11 @@ class CounterInitilias extends CounterState {
 
 // Implemento listener
 
-class IncrementState extends CounterState {
+/* class IncrementState extends CounterState {
   IncrementState(int increasedValue) : super(couterValue: increasedValue);
 }
 
 class DecrementState extends CounterState {
   DecrementState(int decreasedValue) : super(couterValue: decreasedValue);
 }
+ */
