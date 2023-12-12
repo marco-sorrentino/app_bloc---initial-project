@@ -61,7 +61,7 @@ class _TextUserState extends State<TextUser> {
               ),
               BlocBuilder<TextBloc, TextState>(
                 builder: (context, state) {
-                  // print(state.textList);
+                  print(state.textList);
                   return Container();
                 },
               )
