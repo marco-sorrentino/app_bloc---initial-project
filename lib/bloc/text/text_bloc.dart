@@ -19,5 +19,9 @@ class TextBloc extends Bloc<TextEvent, TextState> {
         ..add(event.text);
       emit(TextState(textList: updatedTextList));
     });
+
+    on<TextClear>((event, emit) {
+      emit(TextState(textList: []));
+    });
   }
 }

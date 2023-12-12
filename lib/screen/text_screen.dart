@@ -30,6 +30,10 @@ class _TextUserState extends State<TextUser> {
       _yourTextController.clear();
     }
 
+    void _clearList() {
+      context.read<TextBloc>().add(TextClear());
+    }
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -45,6 +49,10 @@ class _TextUserState extends State<TextUser> {
               CupertinoButton.filled(
                 child: const Text("SUBMIT"),
                 onPressed: _sendText,
+              ),
+              CupertinoButton.filled(
+                child: const Text("REMOVE"),
+                onPressed: _clearList,
               ),
               TextGenerated()
             ],

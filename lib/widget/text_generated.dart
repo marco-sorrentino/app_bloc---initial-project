@@ -10,7 +10,6 @@ class TextGenerated extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<TextBloc, TextState>(
       builder: (context, state) {
-        print(state.textList);
         List<String> listState = state.textList;
         return Expanded(
           child: ListView.builder(
