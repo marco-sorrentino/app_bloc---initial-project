@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
 class TextState extends Equatable {
-  final List<String> textList;
   const TextState({required this.textList});
+  final List<String> textList;
 
   @override
   List<Object> get props => [textList];
