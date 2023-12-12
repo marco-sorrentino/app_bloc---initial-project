@@ -19,9 +19,13 @@ class TextGenerated extends StatelessWidget {
                 key: GlobalKey(),
                 child: Card(
                   child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      listState[index],
+                    padding: EdgeInsets.all(5),
+                    child: ListTile(
+                      title: Icon(
+                        Icons.star_rate_rounded,
+                        color: Colors.amber,
+                      ),
+                      leading: Text(listState[index]),
                     ),
                   ),
                 ),
