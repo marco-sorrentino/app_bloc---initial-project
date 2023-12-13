@@ -1,6 +1,7 @@
 import 'package:counter_app_bloc/bloc/bloc_imports.dart';
 import 'package:counter_app_bloc/bloc/text/text_bloc.dart';
 import 'package:counter_app_bloc/bloc/text/text_event.dart';
+import 'package:counter_app_bloc/screen/favorite_screen.dart';
 import 'package:counter_app_bloc/widget/text_generated.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,15 @@ class _TextUserState extends State<TextUser> {
 
   @override
   Widget build(BuildContext context) {
+    void _changePage() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => FavoriteScreen(),
+        ),
+      );
+    }
+
     void _sendText() {
       if (_yourTextController.text.isNotEmpty) {
         context.read<TextBloc>().add(TextAdd(_yourTextController.text));
@@ -54,7 +64,11 @@ class _TextUserState extends State<TextUser> {
                 child: const Text("REMOVE"),
                 onPressed: _clearList,
               ),
-              TextGenerated()
+              TextGenerated(),
+              CupertinoButton.filled(
+                child: const Text("VIEW FAVORITE"),
+                onPressed: _changePage,
+              ),
             ],
           ),
         ),
